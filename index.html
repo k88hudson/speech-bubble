@@ -7,6 +7,7 @@
 <html lang="en">
  <head>
   <meta charset="UTF-8" />
+  <link href='http://fonts.googleapis.com/css?family=Walter+Turncoat' rel='stylesheet' type='text/css'>
   <style>
 
     body { 
@@ -18,14 +19,15 @@
     }
     
     .speech {
+      font-family: 'Walter Turncoat';
       position: absolute;
       display: inline-block;
-      max-width: 200px;
+      max-width: 300px;
       text-align: center;
       padding: 20px;
-      font-size: 14px;
+      font-size: 18px;
       line-height: 1.4;
-      font-style: italic;
+      text-transform: lowercase;
     }
 
     h3 {
@@ -47,7 +49,7 @@
   <script src="speechBubble.js"></script>
   <script>
   document.addEventListener("DOMContentLoaded", function() {
-    
+
     speechBubble("textbox", {flipCode: 3});
 
     speechBubble("textbox2", {
