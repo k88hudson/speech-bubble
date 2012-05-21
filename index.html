@@ -1,13 +1,9 @@
 <!DOCTYPE html>
-
-<!-- Created with Ai->Canvas Export Plug-In Version 1.0 (Mac) -->
-<!-- By Mike Swanson (http://blogs.msdn.com/mswanson/)        -->
-<!-- and MIX Online  (http://visitmix.com/)                   -->
-
 <html lang="en">
  <head>
   <meta charset="UTF-8" />
   <link href='http://fonts.googleapis.com/css?family=Walter+Turncoat' rel='stylesheet' type='text/css'>
+  
   <style>
 
     body { 
@@ -26,7 +22,7 @@
       text-align: center;
       padding: 20px;
       font-size: 18px;
-      line-height: 1.4;
+      line-height: 1.2;
       text-transform: lowercase;
     }
 
@@ -37,8 +33,12 @@
     #textbox {
       top: 300px;
       left: 100px;
+      max-width: 200px;
     }
-
+    #textbox1 {
+      top: 380px;
+      left: 190px;
+    }
     #textbox2 {
       top: 250px;
       left: 500px;
@@ -50,7 +50,8 @@
   <script>
   document.addEventListener("DOMContentLoaded", function() {
 
-    speechBubble("textbox", {flipCode: 3});
+    speechBubble("textbox", {flipCode: 3, borderWidth: 0});
+    speechBubble("textbox1", {borderWidth: 0, triangleWidth:.8});
 
     speechBubble("textbox2", {
       shadow: 4, //Strength of the drop-shadow. Defaults to 0.
@@ -61,12 +62,16 @@
       flipCode: 1 //Can be 1,2,3,4. Flips the bubble.
     });
 
+
+    //$(".speech").draggable();
+
   }, false);
   </script>
  </head>
  <body>
   <h1>Speech bubbles with canvas</h1>
-   <div id="textbox" class="speech" data-triangle="20"><div>Hello world dasd asd asd asd asd asd asd asd</div></div>
+   <div id="textbox" class="speech" data-triangle="20"><div>What did you say?</div></div>
+   <div id="textbox1" class="speech" data-triangle="20"><div>Really? Are you serious?</div></div>
    <div id="textbox2" class="speech" data-triangle="20"><div><h3>Wisdom</h3>Twenty years from now you will be more disappointed by the things that you didn't do than by the ones you did do. So throw off the bowlines. Sail away from the safe harbor. Catch the trade winds in your sails. Explore. Dream. Discover.</div></div>
    <script src="https://gist.github.com/2760081.js"> </script>
  </body>

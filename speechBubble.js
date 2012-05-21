@@ -13,6 +13,8 @@ function speechBubble( id, args ) {
       radius = args.radius || 30,
       flipCode = args.flipCode || 1;
 
+      console.log( w, h );
+
       //In case it is 0
       (border === undefined) && (border = 2);
 
