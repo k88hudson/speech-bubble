@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<!-- Created with Ai->Canvas Export Plug-In Version 1.0 (Mac) -->
+<!-- By Mike Swanson (http://blogs.msdn.com/mswanson/)        -->
+<!-- and MIX Online  (http://visitmix.com/)                   -->
+
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <style>
+
+    body { 
+      position: relative;
+      background: #EEE; 
+      font-family: Georgia;
+      width: 960px;
+      margin: 0 auto;
+    }
+    
+    .speech {
+      position: absolute;
+      display: inline-block;
+      max-width: 200px;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      line-height: 1.4;
+      font-style: italic;
+    }
+
+    h3 {
+      margin: 0;
+    }
+
+    #textbox {
+      top: 300px;
+      left: 100px;
+    }
+
+    #textbox2 {
+      top: 250px;
+      left: 500px;
+    }
+
+  </style>
+  <title>canvas</title>
+  <script src="speechBubble.js"></script>
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    
+    speechBubble("textbox", {flipCode: 3});
+
+    speechBubble("textbox2", {
+      shadow: 4, //Strength of the drop-shadow. Defaults to 0.
+      borderWidth: 0, //Border width. Defaults to 2
+      triangleHeight: 50, //Height of the triangle. Defaults to 30.
+      triangleWidth: 1.2, //A ratio defining the width of the triangle. Defaults to 1.
+      radius: 20, //Corner radius of the bubble
+      flipCode: 1 //Can be 1,2,3,4. Flips the bubble.
+    });
+
+  }, false);
+  </script>
+ </head>
+ <body>
+  <h1>Speech bubbles with canvas</h1>
+   <div id="textbox" class="speech" data-triangle="20"><div>Hello world dasd asd asd asd asd asd asd asd</div></div>
+   <div id="textbox2" class="speech" data-triangle="20"><div><h3>Wisdom</h3>Twenty years from now you will be more disappointed by the things that you didn't do than by the ones you did do. So throw off the bowlines. Sail away from the safe harbor. Catch the trade winds in your sails. Explore. Dream. Discover.</div></div>
+   <script src="https://gist.github.com/2760081.js"> </script>
+ </body>
+</html>
