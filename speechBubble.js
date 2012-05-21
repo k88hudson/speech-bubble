@@ -52,15 +52,20 @@ function speechBubble( id, args ) {
     ctx.quadraticCurveTo(x, b, x, b-radius);
     ctx.lineTo(x, y+radius);
     ctx.quadraticCurveTo(x, y, x+radius, y);
+
     ctx.shadowOffsetX = shadow/2;
     ctx.shadowOffsetY = shadow/2;
     ctx.shadowBlur = shadow;
     ctx.shadowColor = "rgba(0,0,0,.4)";
-
     ctx.fillStyle = "rgb(255,255,255)";
     ctx.fill();
 
     if(border !== 0){ 
+    	ctx.shadowColor = 0;  
+			ctx.shadowBlur    = 0;  
+			ctx.shadowOffsetX = 0;  
+			ctx.shadowOffsetY = 0; 
+
       ctx.strokeStyle = "rgb(0,0,0)";
       ctx.lineWidth = border;
       ctx.stroke();
